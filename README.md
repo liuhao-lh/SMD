@@ -63,7 +63,7 @@ The above command uses LARS optimizer and a default batch size of 4096.
 If you use SMD in your research or wish to refer to the baseline results published in this paper, please use the following BibTeX entry.
 
 ```bibtex
-@inproceedings{liu2022improving,
+@inproceedings{ECCV2022smd,
   title={Improving Self-supervised Lightweight Model Learning via Hard-Aware Metric Distillation},
   author={Liu, Hao and Ye, Mang},
   booktitle={Computer Vision--ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23--27, 2022, Proceedings, Part XXXI},
