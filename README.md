@@ -1,5 +1,6 @@
 # Improving Self-supervised Lightweight Model Learning via Hard-aware Metric Distillation
-A PyTorch implementation of the paper SMD.
+A PyTorch implementation of our paper:
+> [Improving Self-supervised Lightweight Model Learning via Hard-aware Metric Distillation](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136910286.pdf)
 
 
 ## Self-supervised Distillation on ImageNet
