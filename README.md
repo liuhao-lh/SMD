@@ -58,7 +58,10 @@ python main_lincls.py \
 
 The above command uses LARS optimizer and a default batch size of 4096.
 
-### Citation 
+## Acknowledgement
+This repository is partly built upon [SimSiam](https://github.com/facebookresearch/simsiam) and [DisCo](https://github.com/Yuting-Gao/DisCo-pytorch). Thanks for their great works!
+
+## Citation 
 
 If you use SMD in your research or wish to refer to the baseline results published in this paper, please use the following BibTeX entry.
 
