@@ -50,7 +50,7 @@ With a pre-trained model, to train a supervised linear classifier on frozen feat
 ```
 python main_lincls.py \
   -a resnet18 \
-  --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
+  --dist-url 'tcp://localhost:10003' --multiprocessing-distributed --world-size 1 --rank 0 \
   --pretrained [your checkpoint path]/checkpoint_0099.pth.tar \
   --lars \
   [your imagenet-folder with train and val folders]
