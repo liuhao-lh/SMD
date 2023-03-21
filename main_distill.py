@@ -112,7 +112,6 @@ def main():
     if args.arch in ['mobilenetv3_large', 'efficientnet_b1', 'efficientnet_b0']:
         args.tau = 0.004
 
-    
     if args.seed is not None:
         random.seed(args.seed)
         torch.manual_seed(args.seed)
