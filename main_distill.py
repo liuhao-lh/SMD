@@ -108,6 +108,9 @@ def main():
     print(args.output_dir)
     if not os.path.isdir(args.output_dir):
         os.makedirs(args.output_dir)
+        
+    if args.arch in ['mobilenetv3_large', 'efficientnet_b1', 'efficientnet_b0']:
+        args.tau = 0.004
 
     
     if args.seed is not None:
