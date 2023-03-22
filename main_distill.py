@@ -103,14 +103,14 @@ parser.add_argument('--tau', type=float, default=0.04, help='tau for metric dist
 def main():
     args = parser.parse_args()
     
+    if args.arch in ['mobilenetv3_large', 'efficientnet_b1', 'efficientnet_b0']:
+        args.tau = 0.004
+    
     args.output_dir = args.output_dir + '/' + args.arch + '_distilled_by_' + args.arch_t + '_x' + str(
         args.times) + '_tau:' + str(args.tau)
     print(args.output_dir)
     if not os.path.isdir(args.output_dir):
         os.makedirs(args.output_dir)
-        
-    if args.arch in ['mobilenetv3_large', 'efficientnet_b1', 'efficientnet_b0']:
-        args.tau = 0.004
 
     if args.seed is not None:
         random.seed(args.seed)
