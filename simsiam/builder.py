@@ -65,7 +65,7 @@ class SimSiam_smd(nn.Module):
     """
     Build a student model.
     """
-    def __init__(self, base_encoder, teacher_dim=2048):
+    def __init__(self, base_encoder, arch, teacher_dim=2048):
         """
         teacher_dim: teacher feature dimension (default: 2048)
         """
@@ -73,7 +73,10 @@ class SimSiam_smd(nn.Module):
 
         # create the encoder
         # num_classes is the teacher feature dimension
-        self.encoder = base_encoder(num_classes=teacher_dim, zero_init_residual=True)
+        if 'resnet' in arch:
+            self.encoder = base_encoder(num_classes=teacher_dim, zero_init_residual=True)
+        else:
+            self.encoder = base_encoder(num_classes=teacher_dim)
 
         dim_mlp = self.encoder.fc.weight.shape[1]
         self.encoder.fc = nn.Linear(dim_mlp, teacher_dim)
