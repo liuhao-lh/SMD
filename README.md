@@ -59,7 +59,7 @@ python main_lincls.py \
 The above command uses LARS optimizer and a default batch size of 4096.
 
 ## Acknowledgement
-This repository is partly built upon [SimSiam](https://github.com/facebookresearch/simsiam), [DisCo](https://github.com/Yuting-Gao/DisCo-pytorch) and SEED(https://github.com/jacobswan1/SEED). Thanks for their great works!
+This repository is partly built upon [SimSiam](https://github.com/facebookresearch/simsiam), [DisCo](https://github.com/Yuting-Gao/DisCo-pytorch) and [SEED](https://github.com/jacobswan1/SEED). Thanks for their great works!
 
 ## Citation 
 
