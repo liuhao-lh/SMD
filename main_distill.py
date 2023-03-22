@@ -40,6 +40,8 @@ model_names = sorted(name for name in models.__dict__
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Training')
 parser.add_argument('data', metavar='DIR',
                     help='path to dataset')
+
+# choice: resnet18, resnet34, mobilenetv3_large, efficientnet_b1, efficientnet_b0
 parser.add_argument('-a', '--arch', metavar='ARCH', default='resnet18',
                     choices=model_names,
                     help='model architecture: ' +
@@ -174,9 +176,9 @@ def main_worker(gpu, ngpus_per_node, args):
     
     # create model
     print("=> creating model '{}'".format(args.arch))
-    student_backbone = torchvision.models.__dict__[args.arch]
+    student_backbone = models.__dict__[args.arch]
     model = simsiam.builder.SimSiam_smd(
-            student_backbone, teacher_model.fc.weight.shape[1])
+            student_backbone, args.arch, teacher_model.fc.weight.shape[1])
     
     teacher_model.fc = nn.Identity()
     
